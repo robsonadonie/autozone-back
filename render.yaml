@@ -1,0 +1,10 @@
+service :
+  - type: web
+    name: autozone-api
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node dist/main.js
+    envVars: 
+      - key: PORT
+        port: 3000
